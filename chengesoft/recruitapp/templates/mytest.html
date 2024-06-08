@@ -1,0 +1,184 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChengeRecruit</title>
+    <link rel="stylesheet" href="{% static 'assets/dist/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/uix.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/font_awesome/css/font-awesome.min.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-4">
+            <div class="profile-card-4 z-depth-3">
+            <div class="card">
+            <div class="card-body text-center bg-primary rounded-top">
+            <div class="user-box">
+                <img src="" alt="" class="rounded-circle user-avatar-xl">
+            </div>
+            <h5 class="mb-1 text-white">{{user.firstname}} {{user.lastname}}</h5>
+            <h6 class="text-light">UI/UX Engineer</h6>
+            </div>
+         <div class="card-body">
+            <ul class="list-group shadow-none">
+                <li class="list-group-item">
+                    <div class="list-icon">
+                        <i class="fa fa-phone-square"></i>
+                    </div>
+                   <div class="list-details">
+                        <span>{{user.phone}}</span>
+                        <small>Mobile Number</small>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="list-icon">
+                      <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="list-details">
+                        <span><a href="file:///C:/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d6bfb8b0b996b3aeb7bba6bab3f8b5b9bb">[email&nbsp;protected]</a></span>
+                        <small>{{user.email}}</small>
+                     </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="list-icon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                   <div class="list-details">
+                        <span>{{user.address}}</span>
+                        <small>Location</small>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="list-icon">
+                        <i class="fa fa-globe"></i>
+                    </div>
+                   <div class="list-details">
+                        <span>www.softex.com</span>
+                        <small>Portfolio Website</small>
+                    </div>
+                </li>
+            </ul>
+            <div class="row text-center mt-4">
+                <div class="col p-2">
+                    <h4 class="mb-1 line-height-5">154</h4>
+                    <small class="mb-0 font-weight-bold">Projects</small>
+                </div>
+                <div class="col p-2">
+                    <h4 class="mb-1 line-height-5">2.2k</h4>
+                    <small class="mb-0 font-weight-bold">Followers</small>
+                </div>
+                <div class="col p-2">
+                    <h4 class="mb-1 line-height-5">9.1k</h4>
+                   <small class="mb-0 font-weight-bold">Views</small>
+               </div>
+            </div>
+        </div>
+        <div class="card-footer text-center">
+            <a href="javascript:void()" class="btn-social btn-facebook waves-effect waves-light m-1"><i class="fa fa-facebook"></i></a>
+            <a href="javascript:void()" class="btn-social btn-google-plus waves-effect waves-light m-1"><i class="fa fa-google-plus"></i></a>
+            <a href="javascript:void()" class="list-inline-item btn-social btn-behance waves-effect waves-light"><i class="fa fa-behance"></i></a>
+            <a href="javascript:void()" class="list-inline-item btn-social btn-dribbble waves-effect waves-light"><i class="fa fa-dribbble"></i></a>
+        </div>
+
+        </div>
+        </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="card z-depth-3">
+                <div class="card-body">
+                    <ul class="nav nav-pills nav-pills-primary nav-justified">
+                        <li class="nav-item">
+                            <a href="javascript:void();" data-target="#profile" data-toggle="pill" class="nav-link active show"><i class="icon-user"></i> <span class="hidden-xs">Profile</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void();" data-target="#messages" data-toggle="pill" class="nav-link"><i class="icon-envelope-open"></i> <span class="hidden-xs">Profieciency Test</span></a>
+                        </li>
+                        
+                    </ul>
+                    <div class="tab-content p-3">
+                         <div class="tab-pane active show" id="profile">
+                            <h5 class="mb-3">Proffessional Profile</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Education</h6>
+                                    <p class="text-primary">{{user.education}} - {{user.institute}}</p>
+                                    <h5 class="mt-5">Progress Towards Getting Hired</h5>
+           
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width:{{score}}%;" aria-valuenow="{{score}}" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    {%if score is 90 %}
+                                     <h4 class="my-3 text-primary">You are elligible to be hired wait for recruiters</h4>
+                                    {%endif%}
+                        
+                                </div>
+                                <div class="col-md-6">
+                                     <h6>Recent badges</h6>
+                                    <a href="#" class="badge bg-dark">html5</a>
+                                    <a href="#" class="badge bg-dark">react</a>
+                                    <a href="#" class="badge bg-dark">codeply</a>
+                                    <a href="#" class="badge bg-dark">angularjs</a>
+                                    <a href="#" class="badge bg-dark">css3</a>
+                                    <a href="#" class="badge bg-dark">jquery</a>
+                                    <a href="#" class="badge bg-dark">bootstrap</a>
+                                    <a href="#" class="badge bg-dark">responsive-design</a>
+                                    <hr>
+                                   <span class="badge badge-primary"><i class="fa fa-user"></i> 900 Followers</span>
+                                   <span class="badge badge-success"><i class="fa fa-cog"></i> 43 Forks</span>
+                                  <span class="badge badge-danger"><i class="fa fa-eye"></i> 245 Views</span>
+                   </div>
+                  <div class="col-md-12">
+                   <h5 class="mt-2 mb-3"><span class="fa fa-clock-o ion-clock float-right"></span> Recent Activity</h5>
+                  <table class="table table-hover table-striped">
+                        <tbody>
+                            <tr>
+                            <td>
+                              <strong></strong> joined ACME Project Team in <strong>`Collaboration`</strong>
+                            </td>
+                          </tr>
+        
+        
+                        </tbody>
+                   </table>
+               </div>
+               </div>
+        
+        </div>
+        <div class="tab-pane" id="messages">
+        <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <div class="alert-icon">
+        <i class="icon-info"></i>
+        </div>
+        <div class="alert-message">
+        <span><strong>Info!</strong> Lorem Ipsum is simply dummy text.</span>
+        </div>
+        </div>
+        <p>Theory Test</p>
+          {% for q  in questions%}
+          <p>{{q.question}}</p>
+          {%endfor%} 
+        <a href="/theorytest">Take it</a>
+
+        <h4>Practical Tests</h4>
+        <p>{{practicals.test_title}}  <i>{{practicals.test_name}}</i>  
+            
+        <a class="btn btn-success" href="/practicaltest/{{practicals.id}}">Start Practical Test</a>
+        </p>
+        </div>
+        
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div> 
+
+        <script src="{% static 'assets/js/jquery-1.10.2.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

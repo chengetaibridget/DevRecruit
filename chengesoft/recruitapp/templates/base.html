@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chenge Recruit</title>
+    
+    <link rel="stylesheet" href="{% static 'assets/dist/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/uix.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/uicx.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/datepicker.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/summernote/css/summernote-bs4.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/font_awesome/css/font-awesome.min.css' %}">
+</head>`
+<body>
+   
+    {% block content %} {% endblock %}
+    
+   <!--<script src="{% static 'assets/js/main2.js' %}"></script>--> 
+    <script src="{% static 'assets/jquery/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/moment.js' %}"></script>
+    <script src="{% static 'assets/jquery/jquery.slim.min.js' %}"></script>
+    <script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+    <script src="{% static 'assets/typed/typed.umd.js' %}"></script>
+    <script src="{% static 'assets/js/datepicker.js' %}"></script>
+    
+    
+    <script src="{% static 'assets/js/lib/ace.js' %}"></script>
+    <script src="{% static 'assets/js/lib/theme-monokai.js' %}"></script>
+    <script src="{% static 'assets/js/compilerx.js' %}"></script>
+    <script src="{% static 'assets/js/answerx.js' %}"></script>
+    <script src="{%static 'assets/summernote/js/summernote-bs4.js'%}"></script>
+    <script>
+
+        $(function() {
+           var $dobir = $('#id_dob');
+           $dobir.datepicker({
+             autoHide: true,
+             format: 'yyyy-mm-dd',
+           });
+      
+         });
+         
+      
+      </script>
+    
+    
+</body>
+</html>

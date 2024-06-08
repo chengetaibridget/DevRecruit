@@ -1,0 +1,54 @@
+{%extends 'base.html'%}
+{% block content %} 
+{%include 'nv.html'%}
+
+<div class="row mx-5 my-5">
+    <div class="col-md-5 mt-5 my-5">
+        <div class="card">
+            <div class="card-header text-center bg-white">Here is Your Question</div>
+            <div class="card-body">
+
+                <p class="text-primary">
+                    {{practical.test_details}}
+                </p>
+            </div>
+        </div>
+       <div class="my-5">
+            <a class="btn btn-secondary" href="/recruit">Home</a>
+            <button class="btn btn-success" onclick="saveAnswer()">Submit Your Solution</button>
+       </div>
+    </div>
+    <div class="col-md-7 mt-5 my-5">
+        <div class="card">
+            <div class="card-header bg-white"><h4 class="text-primary">Write Your Code Solution Here</h4></div>
+            <div class="card-body">
+                
+                <div class="control-panel">
+                    Select Language:
+                     &nbsp; &nbsp;
+                     <select id="languages" class="languages" onchange="changeLanguage()">
+                        <option value="c"> C </option>
+                        <option value="cpp"> C++ </option>
+                        <option value="php"> PHP </option>
+                        <option value="python"> Python </option>
+                        <option value="node"> Node JS </option>
+                    </select>
+                </div>
+               <div class="editor" id="editor"></div>
+
+             <div class="button-container">
+             <button class="btn btn-secondary" onclick="executeCode()">Execute</button>
+             </div>
+
+             <div class="output"></div>
+
+   
+    
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+{% endblock %}

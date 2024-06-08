@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{% block content %} 
+{%include 'nav.html'%}
+<h1 class="my-5">Chenge Recruit</h1>
+<div class="container jumbotron mt-5 py-5">
+    <form method="POST" action="" enctype="multipart/form-data">
+        
+        {% csrf_token %}
+        
+        <div class="col-md-5">
+            {% for field in form %}
+             <div class="mb-3">{{field}}</div>
+            {% endfor %}
+           
+            
+        </div>
+        <input class="btn btn-success" type="submit" value="Register">
+       
+        <a class="btn btn-success" href='{% url 'login' %}'>Login </a>
+        
+    </form>
+    
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+.ht-100v {
+    height: 100vh;
+}
+
+
+.bg-image {
+    background: url(/static/assets/images/auth-bg.png) no-repeat;
+    background-size: cover;
+}
+
+.auth-left-content,
+.signup-form {
+    width: 500px;
+}
+
+.weather-small .current-weather {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.weather-city {
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+}
+
+.create-account {
+    font-size: 3rem;
+}

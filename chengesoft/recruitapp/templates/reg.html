@@ -1,0 +1,114 @@
+{%extends 'base.html'%}
+{% block content %} 
+
+
+<div class="">
+    <div class="row ht-100v">
+
+      <div class="col-md-6 bg-image d-flex justify-content-center align-items-center">
+        
+
+        <div class="auth-left-content mt-5 mb-5 text-center">
+          <div class="weather-small text-white">
+              <p class="current-weather"><i class='bx bx-sun'></i> <span><\></span></p>
+              <p class="weather-city" id="myhour">Gyumri</p>
+          </div>
+          <div class="text-white mt-5 mb-5">
+              <h2 class="create-account mb-3">Create Account</h2>
+              <p>Enter your details and start your recruitment journey with us.</p>
+          </div>
+          <div class="auth-quick-links">
+              <a href="/" class="btn btn-outline-primary">Homepage</a>
+          </div>
+      </div>
+
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="text-center">
+           <h1 class="my-3 text-primary">Chenge Recruit</h1>
+        </div>
+        <form method="POST" action="" enctype="multipart/form-data" class="pt-1 mx-5">
+        
+          {% csrf_token %}
+  
+          <div class="row g-3">
+              <div class="col-sm-6">
+                {{form.firstname}}
+              </div>
+  
+              <div class="col-sm-6">
+                {{form.lastname}}
+              </div>
+          </div>
+
+          <div class="my-3">
+            {{form.username}}
+          </div>
+
+          
+            <div class="input-group my-3">
+              {{form.dob}}
+              <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+            </div>
+          
+
+          <div class="my-3">
+            {{form.phone}}
+          </div>
+
+
+          <div class="input-group my-3">
+            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+            {{form.email}}
+          </div>
+
+          <div class="my-3">
+            {{form.education}}
+          </div>
+
+          <div class="my-3">
+            {{form.institute}}
+          </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-sm-6">
+              {{form.password1}}
+            </div>
+
+            <div class="col-sm-6">
+              {{form.password2}}
+            </div>
+        </div>
+
+       <div class="row">
+        <div class="col-md-6">
+          <span class="go-login">Already a member? <a href="{%url 'login'%}">Sign In</a></span>
+        </div>
+
+        <div class="col-md-3">
+          <button class="btn btn-primary" type="submit">Register</button>
+        </div>
+
+       </div>
+      </form>
+
+      </div>
+
+      
+    </div>
+        
+    
+</div>
+
+<script>
+  var t=((new Date()).getHours()).toString();
+  var u=((new Date()).getMinutes()).toString();
+
+  var v=t +":"+u;
+
+  document.getElementById("myhour").innerHTML=v;
+</script>
+
+{% endblock %}
